@@ -1,0 +1,361 @@
+/* styles.css */
+
+/* General styles */
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #424242;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* S'assure que le corps prend toute la hauteur de la fenêtre */
+}
+
+
+
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Links styles */
+a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+main {
+    flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* Footer styles */
+footer.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Modifié de static à relative */
+    width: 100%;
+    margin-top: 20px;
+    bottom: 0; /* Place le footer en bas */
+}
+
+/* Profile photo styles */
+.profile-photo {
+    border-radius: 50%;
+    width: 25%;
+    height: auto;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+/* Container styles */
+.container {
+    background-color: #555;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container img {
+    border-radius: 10px;
+    width: 45%;
+    height: auto;
+}
+
+.container div {
+    width: 50%;
+    margin-left: 20px;
+}
+
+/* Content container styles for veille.html */
+.content-container {
+    background-color: #555;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.article-container {
+    background-color: #666;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.article-container h3, .article-container p {
+    margin: 10px 0;
+}
+
+/* Project card styles */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    background-color: #555;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* 3 cartes par ligne en enlevant la marge */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Responsive design pour tablettes */
+@media (max-width: 1024px) {
+    .project-card {
+        width: calc(50% - 40px); /* 2 cartes par ligne sur les tablettes */
+    }
+}
+
+/* Responsive design pour téléphones */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(100% - 40px); /* 1 carte par ligne sur les téléphones */
+    }
+}
+
+
+.project-card h3, .project-card p {
+    margin: 10px 0;
+}
+
+.project-card .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.project-card a:hover {
+    background-color: #1C86EE;
+}
+
+/* Certifications styles */
+.certifications {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.certification {
+    text-align: center;
+    margin: 20px;
+}
+
+.certification img {
+    width: 100%;
+    height: auto;
+}
+
+.certification .download-button {
+    display: inline-block;
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.certification .download-button:hover {
+    background-color: #1C86EE;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container img, .container div {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .certifications {
+        flex-direction: column;
+    }
+}
+
+/* Skills logo styles */
+.skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills img {
+    width: 20%;
+    height: auto;
+}
+
+
+.soustitre{
+    margin-left: 15px;
+}
+
+/* Menu Burger Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px;
+}
+
+nav ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav a {
+        padding: 15px 0;
+        display: block;
+    }
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container img, .container div {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .certifications {
+        flex-direction: column;
+    }
+
+    /* Agrandir la photo de profil et réduire la taille du texte */
+    .profile-photo {
+        width: 50%;  /* Augmenter la taille de l'image de profil */
+        margin-left: 10px;
+    }
+
+    .container div, .soustitre, p {
+        font-size: 20px;  /* Réduire la taille du texte */
+        margin-right: 35px;
+    }
+
+    .container div, .soustexte, p {
+        font-size: 11px;  /* Réduire la taille du texte */
+        margin-right: 35px;
+    }
+
+    
+
+}
